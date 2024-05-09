@@ -1,5 +1,6 @@
 from playsound import playsound
 from time import sleep
+import os
 
 
 class MorseCodeData:
@@ -61,11 +62,11 @@ class MorseCodeData:
         sleep(0.7)
 
     def __play_dash(self):
-        playsound("/home/karen/PycharmProjects/morse-code-converter/sounds/dash.wav", False)
+        playsound(os.path.join(".", "sounds", "dash.wav"), False)
         sleep(0.4)
 
     def __play_dot(self):
-        playsound("/home/karen/PycharmProjects/morse-code-converter/sounds/dot.wav", False)
+        playsound(os.path.join(".", "sounds", "dot.wav"), False)
         sleep(0.2)
 
     def __generate_a_tone(self):
@@ -73,7 +74,6 @@ class MorseCodeData:
         self.__play_dash()
 
     def __generate_b_tone(self):
-        playsound("/home/karen/PycharmProjects/morse-code-converter/sounds/dash.wav", False)
         self.__play_dash()
         self.__play_dot()
         self.__play_dot()
