@@ -62,12 +62,12 @@ class MorseCodeData:
         sleep(0.7)
 
     def __play_dash(self):
-        playsound(os.path.join(".", "sounds", "dash.wav"), False)
-        sleep(0.4)
+        playsound(os.path.join(os.getcwd(), "sounds", "dash.wav"), True)
+        sleep(0.1)
 
     def __play_dot(self):
-        playsound(os.path.join(".", "sounds", "dot.wav"), False)
-        sleep(0.2)
+        playsound(os.path.join(os.getcwd(), "sounds", "dot.wav"), True)
+        sleep(0.1)
 
     def __generate_a_tone(self):
         self.__play_dot()

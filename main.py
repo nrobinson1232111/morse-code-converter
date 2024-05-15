@@ -1,7 +1,4 @@
-# data class (struct) that stores morse code info
-# convert text to morse case
 import sys
-
 import morse_code_converter
 
 input_text = input("Please enter text to turn into morse code: ")
